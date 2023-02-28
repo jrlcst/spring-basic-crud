@@ -1,0 +1,19 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crud-example
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: dbo
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+
+server:
+  servlet:
+    context-path: /api
